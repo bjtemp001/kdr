@@ -1,0 +1,16 @@
+[Unit]
+Description=Kernel Device Manager
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStartPre=
+ExecStart=/usr/bin/udevd
+ExecStartPost=
+ExecStop=
+ExecReload=
+
+[Install]
+WantedBy=multi-user.target

