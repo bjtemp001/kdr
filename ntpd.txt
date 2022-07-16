@@ -1,5 +1,5 @@
 [Unit]
-Description=Kernel Device Manager
+Description=Network Time Protocol Deamon
 
 [Service]
 Type=simple
@@ -7,7 +7,7 @@ Restart=always
 RestartSec=1
 User=root
 ExecStartPre=
-ExecStart=/usr/bin/udevd
+ExecStart=/usr/bin/ntpd
 ExecStartPost=
 ExecStop=
 ExecReload=
